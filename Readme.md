@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
-* Студент: [Неопознанный енот](https://up.htmlacademy.ru/htmlcss/19/user/548571).
-* Наставник: `Неизвестно`.
+* Студент: [Komendantov Aleksii](https://up.htmlacademy.ru/htmlcss/19/user/548571).
+* Наставник: `Ольга Вадясова`.
 
 ---
 

@@ -3,10 +3,169 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
+  <header class="main-header">
+    <h1 class="main-header__title">Device</h1>
+    <input type="text"
+           class="main-header__search">
+      Поиск по сайту
+    </input>
+    <ul class="main-header__user-menu">
+      <li>Войти</li>
+    </ul>
+    <ul class="main-header__shop-menu">
+      <li>Сравнить</li>
+      <li>Корзина</li>
+    </ul>
+    <ul class="main-header__catalog">
+      <li>Каталог товаров</li>
+    </ul>
+    <ul class="main-header__options">
+      <li>
+        <a href="#">Доставка</a>
+      </li>
+      <li>
+        <a href="#">Гарантия</a>
+      </li>
+      <li>
+        <a href="#">Контакты</a>
+      </li>
+    </ul>
+    <!--Что то я не понял, похоже какого то дизайна нет, по контексту Каталог товаров +
+		 это скрытое меню, то есть <ul>, но такого состояния на макете я не нашел -->
+    <span>-</span>
+    <span>01</span>
+  </header>
+  <main class="main">
+    <secton class="actual-stuff">
+      <img src="#"
+           alt="Селфи палка"
+           class="actual-stuff__img">
+      <div class="actual-stuff__disc">
+        <span>Делай селфи,</span>
+        <br>
+        <span>как Бен Стиллер!</span>
+        <p>Самая длинная палка для селфи доступна в нашем магазине.</p>
+        <p>Восемь(Восемь, Карл!)метров длиной и весом всего 5 килограмм</p>
+      </div>
+      <section>
+        <figure class="actual-stuff__slider">
+          <a href="#"
+             class="actual-stuff__slider-img">Подробней</a>
+          <ul class="actual-stuff__slider-step">
+            <li>*</li>
+            <li>*</li>
+            <li>*</li>
+          </ul>
+        </figure>
+        <ul class="actual-stuff__short-disc">
+          <li>
+            <span>8,5</span>
+            <span>м</span>
+            <br>
+            <span>Длина палки</span>
+          </li>
+          <li>
+            <span>5</span><span>кг</span>
+            <br>
+            <span>Вес палки</span>
+          </li>
+          <li>
+            <span>Карбон</span>
+            <br>
+            <span>Материал</span>
+          </li>
+        </ul>
+      </section>
+    </secton>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
+    <nav class="navigation">
+      <ul class="nav__list">
+        <li class="nav__list-item">
+          <a href="#"></a>
+          <span>Виртуальная реальность</span>
+        </li>
+        <li class="nav__list-item">
+          <a href="#"></a>
+          <span>Моноподы для селфи</span>
+        </li>
+        <li class="nav__list-item">
+          <a href="#"></a>
+          <span>Экшн-камеры</span>
+        </li>
+        <li class="nav__list-item">
+          <a href="#"></a>
+          <span>Фитнес-браслеты</span>
+        </li>
+        <li class="nav__list-item">
+          <a href="#"></a>
+          <span>Умные часы</span>
+        </li>
+        <li class="nav__list-item">
+          <a href="#"></a>
+          <span>Квадрокоптеры</span>
+        </li>
+      </ul>
+    </nav>
 
+    <section class="delivery">
+      <ul class="delivery__list">
+        <li>Доставка</li>
+        <li>Кредит</li>
+        <li>Гаранти</li>
+      </ul>
+      <h2 class="delivery__title">Доставка</h2>
+      <p class="delivery__disc">
+        <span>Мы с удовольствием доставим ваш товар прямо к вашему</span>
+        <br>
+        <span>подъезду совершенно бесплатно! Ведь мы неплохо</span>
+        <br>
+        <span>заработаем, поднимая его на ваш этажю</span>
+      </p>
+      <img src="" alt="courier">
+    </section>
+
+    <section class="brands">
+      <ul class="brands__list">
+        <li>dji</li>
+        <li>spgadgets</li>
+        <li>GoPro</li>
+        <li>vive</li>
+      </ul>
+    </section>
+
+    <section class="about">
+      <h2 class="about__title">О Нас</h2>
+      <p class="about__disc">
+        <span>Огромный выбор гаджетов не оставит равнодушним гика,</span>
+        <br>
+        <span>который есть в каждом из нас</span>
+      </p>
+      <ul type="cicle"
+          class="about__partners">
+        <li>Деловые линии</li>
+        <li>Автотрйдинг</li>
+        <li>ЖелДорЭкспедиция</li>
+      </ul>
+      <a href="#"
+         class="about__link">Подробнее о нас</a>
+    </section>
+
+    <section class="contacts">
+      <h2 class="contacts__title">Контакты</h2>
+      <p  class="contacts__disc">
+        <span>Вы можете забрать свой товар сами, заехав в нас офис. Заодно, вы сможете</span>
+        <br>
+        <span>проверить работоспособность покупки. Всякое бывает.</span>
+      </p>
+      <img src="#"
+           alt="карта"
+           class="contacts__map">
+      <div  class="contacts__feedback">Напишите нам</div>
+    </section>
+  </main>
+  <script src="./js/script.js"></script>
   </body>
 </html>

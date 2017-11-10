@@ -2,64 +2,88 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
+    <title>Интернет-магазин: &laquo;Device&raquo;</title>
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
   <header class="main-header">
     <h1 class="main-header__title">Device</h1>
-    <input type="text"
-           class="main-header__search">
-      Поиск по сайту
-    </input>
-    <ul class="main-header__user-menu">
-      <li>Войти</li>
-    </ul>
-    <ul class="main-header__shop-menu">
-      <li>Сравнить</li>
-      <li>Корзина</li>
-    </ul>
-    <ul class="main-header__catalog">
-      <li>Каталог товаров</li>
-    </ul>
-    <ul class="main-header__options">
-      <li>
-        <a href="#">Доставка</a>
-      </li>
-      <li>
-        <a href="#">Гарантия</a>
-      </li>
-      <li>
-        <a href="#">Контакты</a>
-      </li>
-    </ul>
-    <!--Что то я не понял, похоже какого то дизайна нет, по контексту Каталог товаров +
-		 это скрытое меню, то есть <ul>, но такого состояния на макете я не нашел -->
-    <span>-</span>
-    <span>01</span>
+    <form>
+      <input class="main-header__search" type="text" placeholder="Поиск по сайту">
+    </form>
+    <nav class="site-navigation">
+      <ul class="main-header__user-block">
+        <li class="main-header__user-menu__login">
+          <a href="#">Войти</a>
+        <li class="main-header__user-menu__compare">
+          <a href="#">Сравнить</a>
+        </li>
+        <li class="main-header__user-menu__basket">
+          <a href="#">Корзина</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="main-header__catalog">
+      <ul class="main-header__catalog__list">
+        <li class="main-header__catalog__item">
+          <a href="#">Виртуальная реальность</a>
+        </li>
+        <li class="main-header__catalog__item">
+          <a href="#">Моноподы для селфи</a>
+        </li>
+        <li class="main-header__catalog__item">
+          <a href="#">Экшн-камеры</a>
+        </li>
+        <li class="main-header__catalog__item">
+          <a href="#">Фитнесс-браслеты</a>
+        </li>
+        <li class="main-header__catalog__item">
+          <a href="#">Умные часы</a>
+        </li>
+        <li class="main-header__catalog__item">
+          <a href="#">Квадрокоптеры</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="main-header__options">
+      <ul class="main-header__options__list">
+        <li class="main-header__options__item">
+          <a href="#">Доставка</a>
+        </li>
+        <li class="main-header__options__item">
+          <a href="#">Гарантия</a>
+        </li>
+        <li class="main-header__options__item">
+          <a href="#">Контакты</a>
+        </li>
+      </ul>
+    </section>
   </header>
+
   <main class="main">
-    <secton class="actual-stuff">
-      <img src="#"
-           alt="Селфи палка"
-           class="actual-stuff__img">
-      <div class="actual-stuff__disc">
-        <span>Делай селфи,</span>
-        <br>
-        <span>как Бен Стиллер!</span>
-        <p>Самая длинная палка для селфи доступна в нашем магазине.</p>
-        <p>Восемь(Восемь, Карл!)метров длиной и весом всего 5 килограмм</p>
+    <section class="promo">
+      <span>-</span>
+      <img class="promo__img" src="#" alt="Селфи палка">
+      <div class="promo__desc">
+        <span>01</span>
+        <p>
+          <strong>Делай селфи,как Бен Стиллер!</strong>
+        </p>
+        <p>
+          Самая длинная палка для селфи доступна в нашем магазине.
+          Восемь(Восемь, Карл!)метров длиной и весом всего 5 килограмм
+        </p>
       </div>
-      <section>
-        <figure class="actual-stuff__slider">
-          <a href="#"
-             class="actual-stuff__slider-img">Подробней</a>
+        <div class="promo__slider">
+          <a class="promo__slider-img" href="#">Подробней</a>
           <ul class="actual-stuff__slider-step">
             <li>*</li>
             <li>*</li>
             <li>*</li>
           </ul>
-        </figure>
+        </div>
         <ul class="actual-stuff__short-disc">
           <li>
             <span>8,5</span>
@@ -78,8 +102,7 @@
             <span>Материал</span>
           </li>
         </ul>
-      </section>
-    </secton>
+    </section>
 
     <nav class="navigation">
       <ul class="nav__list">
@@ -117,7 +140,7 @@
         <li>Гаранти</li>
       </ul>
       <h2 class="delivery__title">Доставка</h2>
-      <p class="delivery__disc">
+      <p class="delivery__desc">
         <span>Мы с удовольствием доставим ваш товар прямо к вашему</span>
         <br>
         <span>подъезду совершенно бесплатно! Ведь мы неплохо</span>
@@ -138,7 +161,7 @@
 
     <section class="about">
       <h2 class="about__title">О Нас</h2>
-      <p class="about__disc">
+      <p class="about__desc">
         <span>Огромный выбор гаджетов не оставит равнодушним гика,</span>
         <br>
         <span>который есть в каждом из нас</span>
@@ -155,7 +178,7 @@
 
     <section class="contacts">
       <h2 class="contacts__title">Контакты</h2>
-      <p  class="contacts__disc">
+      <p  class="contacts__desc">
         <span>Вы можете забрать свой товар сами, заехав в нас офис. Заодно, вы сможете</span>
         <br>
         <span>проверить работоспособность покупки. Всякое бывает.</span>

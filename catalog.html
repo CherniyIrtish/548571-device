@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Каталог - интернет-магазин: "Device"</title>
-  <link rel="stylesheet" href="catalog.css">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="main-header">
@@ -28,6 +29,7 @@
   </ul>
 
   <nav class="site-navigation">
+    <button type="button">Каталог товаров</button>
     <ul class="site-navigation__catalog-list">
       <li class="site-navigation__catalog-item">
         <a href="#">Виртуальная реальность</a>
@@ -48,14 +50,14 @@
         <a href="#">Квадрокоптеры</a>
       </li>
     </ul>
-    <ul class="site-navigation__options__list">
-      <li class="site-navigation__options__item">
+    <ul class="site-navigation__options-list">
+      <li class="site-navigation__options-item">
         <a href="#">Доставка</a>
       </li>
-      <li class="site-navigation__options__item">
+      <li class="site-navigation__options-item">
         <a href="#">Гарантия</a>
       </li>
-      <li class="site-navigation__options__item">
+      <li class="site-navigation__options-item">
         <a href="#">Контакты</a>
       </li>
     </ul>
@@ -84,53 +86,101 @@
       <li class="sort__list-option">По пулярности</li>
     </ul>
     <span class="sort__btn-block">
-    <button type="button"></button>
+    <button type="button">
+      <!--Если это кнопки, то что вкладывать в них? Какото контент есть?-->
+    </button>
     <button type="button"></button>
   </span>
   </section>
 
   <section class="filter">
-    <h3 class="filter__title">Фильтры:</h3>
+    <section class="filter__wrapper">
+      <h3 class="filter__title">Фильтры:</h3>
+      <section class="range">
+        <h3 class="range__title">Стоимость</h3>
+        <div class="range__scale"></div>
+        <span class="range-left"></span>
+        <span class="range-right"></span>
+      </section>
+      <form name="options">
+      <section class="palette__options">
+        <h3 class="palette__options-title">Цвет</h3>
+          <input type="checkbox" name="color" id="black">
+          <label for="black">Чёрный</label>
+          <input type="checkbox" name="color" id="white">
+          <label for="white">Белый</label>
+          <input type="checkbox" name="color" id="blue">
+          <label for="blue">Синий</label>
+          <input type="checkbox" name="color" id="red">
+          <label for="red">Красный</label>
+          <input type="checkbox" name="color" id="pink">
+          <label for="pink">Розовый</label>
+      </section>
+      <section class="bluetooth__options">
+        <input type="radio" id="bluetooth-is" name="bluetooth">
+        <label for="bluetooth-is">Есть</label>
+        <input type="radio" id="bluetooth-not" name="bluetooth">
+        <label for="bluetooth-not">Нет</label>
+      </section>
+        <button type="button">Показать</button>
+      </form>
 
+
+
+    </section>
   </section>
 
   <section class="pages">
     <ul class="pages__list">
       <li class="pages__list-item">
-        <img src="#">
-        <div>
-          <span class="pages__list-item-title">Любительская селфи-палка</span>
-          <span class="pages__list-item-price">500 грн</span>
-        </div>
+        <a href="#">
+          <img src="#">
+          <div>
+            <span class="pages__list-item-title">Любительская селфи-палка</span>
+            <span class="pages__list-item-price">500 грн</span>
+          </div>
+        </a>
       </li>
       <li class="pages__list-item">
-        <img src="#">
-        <div>
-          <span class="pages__list-item-title">Профессиональная селфи-палка</span>
-          <span class="pages__list-item-price">1500 грн</span>
-        </div>
+        <a href="#">
+          <img src="#">
+          <div>
+            <span class="pages__list-item-title">Профессиональная селфи-палка</span>
+            <span class="pages__list-item-price">1500 грн</span>
+          </div>
+        </a>
       </li>
       <li class="pages__list-item">
-        <img src="#">
-        <div>
-          <span class="pages__list-item-title">Непотопляемая селфи палка</span>
-          <span class="pages__list-item-price">2500 грн</span>
-        </div>
+        <a href="#">
+          <img src="#">
+          <div>
+            <span class="pages__list-item-title">Непотопляемая селфи палка</span>
+            <span class="pages__list-item-price">2500 грн</span>
+          </div>
+        </a>
       </li>
       <li class="pages__list-item">
-        <img src="#">
-        <div>
-          <span class="pages__list-item-title">Селфи-палка "Следуй за мной"</span>
-          <span class="pages__list-item-price">4900 грн</span>
-        </div>
+        <a href="#">
+          <img src="#">
+          <div>
+            <span class="pages__list-item-title">Селфи-палка "Следуй за мной"</span>
+            <span class="pages__list-item-price">4900 грн</span>
+          </div>
+        </a>
       </li>
     </ul>
     <section class="pages__nav">
       <button class="pages__nav-prev" type="button">Назад</button>
       <ul class="pages__nav-list">
-        <li class="pages__nav-list-page">1</li>
-        <li class="pages__nav-list-page">2</li>
-        <li class="pages__nav-list-page">3</li>
+        <li class="pages__nav-list-page">
+          <a href="#">1</a>
+        </li>
+        <li class="pages__nav-list-page">
+          <a href="#">2</a>
+        </li>
+        <li class="pages__nav-list-page">
+          <a href="#">3</a>
+        </li>
       </ul>
       <button class="pages__nav-next" type="button">Вперед</button>
     </section>
@@ -178,6 +228,6 @@
   </ul>
 </footer>
 
-<script src="catalog.js"></script>
+<script src="catalog/catalog.js"></script>
 </body>
 </html>

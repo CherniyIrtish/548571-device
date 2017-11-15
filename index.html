@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <title>Интернет-магазин: "Device"</title>
+  <title>Главная - интернет-магазин: "Device"</title>
   <link rel="stylesheet" href="./normalize.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -13,7 +13,7 @@
     <input class="main-header__search" type="text" placeholder="Поиск по сайту">
   </form>
 
-  <ul class="main-header__user-block" aria-label="Юзер меню">
+  <ul class="main-header__user-block" aria-label="Пользовательское меню">
     <li class="main-header__user-block-login">
       <a href="#">Войти</a>
     </li>
@@ -25,7 +25,7 @@
     </li>
   </ul>
 
-  <nav class="site-navigation" aria-label="Навигация по сайту">
+  <nav class="site-navigation" aria-label="Каталог товаров">
     <button type="button">Каталог товаров</button>
     <ul class="site-navigation__catalog-list">
       <li class="site-navigation__catalog-item">
@@ -62,16 +62,38 @@
 </header>
 
 <main class="main">
-  <section class="promo" aria-label="Акционный товар">
-    <img class="promo__img" src="#" alt="Селфи палка">
+  <section class="promo">
+    <img class="promo__img" src="./img/self.svg" alt="Селфи палка" width="384" height="486">
+    <img class="promo__img" src="./img/watch.svg" alt="Фитнес браслет" width="345" height="485">
+    <img class="promo__img" src="./img/quadro.svg" alt="Квадрокоптер" width="526" height="334">
     <div class="promo__desc">
-      <span>01</span>
       <p>
         Делай селфи,как Бен Стиллер!
       </p>
       <p>
         Самая длинная палка для селфи доступна в нашем магазине.
         Восемь(Восемь, Карл!)метров длиной и весом всего 5 килограмм
+      </p>
+    </div>
+    <div class="promo__desc">
+      <p>
+        Худеем
+        <br>
+        правильно!
+      </p>
+      <p>
+       Мотивирующие фитнес-браслеты помогут найти в себе силы
+       не пропускать занятия!
+      </p>
+    </div>
+    <div class="promo__desc">
+      <p>
+        Порхает как бабочка,
+        жалит как пчела!
+      </p>
+      <p>
+        Этот обычный, на первый взгляд, квадрокоптер оснащен
+        мощным лазером, замаскированным под стандарную камеру.
       </p>
     </div>
     <div class="promo__slider">
@@ -117,33 +139,34 @@
   </section>
 
   <nav class="navigation">
-    <ul class="nav__list">
-      <li class="nav__list-item">
+    <button type="button">Каталог товаров</button>
+    <ul class="site-navigation__list">
+      <li class="site-navigation__list-item">
         <a href="#">
           <span>Виртуальная реальность</span>
         </a>
       </li>
-      <li class="nav__list-item">
+      <li class="site-navigation__list-item">
         <a href="#">
           <span>Моноподы для селфи</span>
         </a>
       </li>
-      <li class="nav__list-item">
+      <li class="site-navigation__list-item">
         <a href="#">
           <span>Экшн-камеры</span>
         </a>
       </li>
-      <li class="nav__list-item">
+      <li class="site-navigation__list-item">
         <a href="#">
           <span>Фитнес-браслеты</span>
         </a>
       </li>
-      <li class="nav__list-item">
+      <li class="site-navigation__list-item">
         <a href="#">
           <span>Умные часы</span>
         </a>
       </li>
-      <li class="nav__list-item">
+      <li class="site-navigation__list-item">
         <a href="#">
           <span>Квадрокоптеры</span>
         </a>
@@ -228,11 +251,12 @@
         <br>
         <span>проверить работоспособность покупки. Всякое бывает.</span>
       </p>
-      <img class="contacts__map" src="#" alt="ул.Строителей, 15">
+      <img class="contacts__map" src="./img/map.png" alt="ул.Строителей, 15">
       <a href="#" class="contacts__feedback">Напишите нам</a>
     </section>
   </article>
 </main>
+
 <footer class="footer">
   <span>Device</span>
   <ul class="footer__user-block">
@@ -273,6 +297,6 @@
     </li>
   </ul>
 </footer>
-<script src="./js/script.js"></script>
+
 </body>
 </html>

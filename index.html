@@ -63,141 +63,153 @@
 
 <main class="main">
   <section class="promo">
-    <img class="promo__img" src="./img/self.svg" alt="Селфи палка" width="384" height="486">
-    <img class="promo__img" src="./img/watch.svg" alt="Фитнес браслет" width="345" height="485">
-    <img class="promo__img" src="./img/quadro.svg" alt="Квадрокоптер" width="526" height="334">
-    <div class="promo__desc">
-      <p>
-        Делай селфи,как Бен Стиллер!
-      </p>
-      <p>
-        Самая длинная палка для селфи доступна в нашем магазине.
-        Восемь(Восемь, Карл!)метров длиной и весом всего 5 килограмм
-      </p>
-    </div>
-    <div class="promo__desc">
-      <p>
-        Худеем
-        <br>
-        правильно!
-      </p>
-      <p>
-       Мотивирующие фитнес-браслеты помогут найти в себе силы
-       не пропускать занятия!
-      </p>
-    </div>
-    <div class="promo__desc">
-      <p>
-        Порхает как бабочка,
-        жалит как пчела!
-      </p>
-      <p>
-        Этот обычный, на первый взгляд, квадрокоптер оснащен
-        мощным лазером, замаскированным под стандарную камеру.
-      </p>
-    </div>
-    <div class="promo__slider">
-      <a class="promo__slider-img" href="#">Подробней</a>
-      <ul class="promo__slider__step">
-        <li>
-          <button type="button">*</button>
-        </li>
-        <li>
-          <button type="button">*</button>
-        </li>
-        <li>
-          <button type="button">*</button>
-        </li>
-      </ul>
-    </div>
-    <table class="promo__short-disc">
-      <tr>
-        <td>8,5 м</td>
-        <td>5 кг</td>
-        <td>Карбон</td>
-      </tr>
-      <tr>
-        <td>Длина палки</td>
-        <td>Вес палки</td>
-        <td>Материал</td>
-      </tr>
-      <tr>
-        <td>48 часов</td>
-      </tr>
-      <tr>
-        <td>Без подзарядки</td>
-      </tr>
-      <tr>
-        <td>800 м</td>
-        <td>50 м</td>
-      </tr>
-      <tr>
-        <td>Дальность полета</td>
-        <td>Радиус поражения</td>
-      </tr>
-    </table>
+    <ul class="promo__list">
+      <li class="promo__item">
+        <img class="promo__img" src="./img/self.svg" alt="Селфи палка" width="384" height="486">
+        <div class="promo__desc">
+          <p>
+            Делай селфи,как Бен Стиллер!
+          </p>
+          <p>
+            Самая длинная палка для селфи доступна в нашем магазине.
+            Восемь(Восемь, Карл!)метров длиной и весом всего 5 килограмм
+          </p>
+        </div>
+        <button type="button">Подробней</button>
+        <table class="promo__short-disc">
+          <tr>
+            <td>8,5 м</td>
+            <td>5 кг</td>
+            <td>Карбон</td>
+          </tr>
+          <tr>
+            <td>Длина палки</td>
+            <td>Вес палки</td>
+            <td>Материал</td>
+          </tr>
+        </table>
+      </li>
+
+      <li class="promo__item">
+        <img class="promo__img" src="./img/watch.svg" alt="Фитнес браслет" width="345" height="485">
+        <div class="promo__details">
+          <p>
+            Худеем
+            <br>
+            правильно!
+          </p>
+          <p>
+            Мотивирующие фитнес-браслеты помогут найти в себе силы
+            не пропускать занятия!
+          </p>
+        </div>
+        <button type="button">Подробней</button>
+        <table class="promo__details">
+          <tr>
+            <td>48 часов</td>
+          </tr>
+          <tr>
+            <td>Без подзарядки</td>
+          </tr>
+        </table>
+      </li>
+
+      <li class="promo__item">
+        <img class="promo__img" src="./img/quadro.svg" alt="Квадрокоптер" width="526" height="334">
+        <div class="promo__desc">
+          <p>
+            Порхает как бабочка,
+            жалит как пчела!
+          </p>
+          <p>
+            Этот обычный, на первый взгляд, квадрокоптер оснащен
+            мощным лазером, замаскированным под стандарную камеру.
+          </p>
+        </div>
+        <button type="button">Подробней</button>
+        <table class="promo__details">
+          <tr>
+            <td>800 м</td>
+            <td>50 м</td>
+          </tr>
+          <tr>
+            <td>Дальность полета</td>
+            <td>Радиус поражения</td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+
+    <ul class="slider__toggles">
+      <li class="slider__step">
+        <button type="button">*</button>
+      </li>
+      <li class="slider__step">
+        <button type="button">*</button>
+      </li>
+      <li class="slider__step">
+        <button type="button">*</button>
+      </li>
+    </ul>
   </section>
 
-  <nav class="navigation">
-    <button type="button">Каталог товаров</button>
-    <ul class="site-navigation__list">
-      <li class="site-navigation__list-item">
+  <section class="category">
+    <ul class="category__list">
+      <li class="category__item">
         <a href="#">
           <span>Виртуальная реальность</span>
         </a>
       </li>
-      <li class="site-navigation__list-item">
+      <li class="category__item">
         <a href="#">
           <span>Моноподы для селфи</span>
         </a>
       </li>
-      <li class="site-navigation__list-item">
+      <li class="category__item">
         <a href="#">
           <span>Экшн-камеры</span>
         </a>
       </li>
-      <li class="site-navigation__list-item">
+      <li class="category__item">
         <a href="#">
           <span>Фитнес-браслеты</span>
         </a>
       </li>
-      <li class="site-navigation__list-item">
+      <li class="category__item">
         <a href="#">
           <span>Умные часы</span>
         </a>
       </li>
-      <li class="site-navigation__list-item">
+      <li class="category__item">
         <a href="#">
           <span>Квадрокоптеры</span>
         </a>
       </li>
     </ul>
-  </nav>
+  </section>
 
-  <section class="slider-services">
-    <ul class="slider-services__list">
-      <li class="slider-services__list-item">
+  <section class="our-services">
+    <h3 class="our-services__title visually-hidden">Дополнительные услуги</h3>
+    <ul class="our-services__list">
+      <li class="our-services__list-item">
         <button type="button">Доставка</button>
-        <h2 class="slider-services__title">Доставка</h2>
-        <p class="slider-services__desc">
+        <p class="our-services__content">
           Мы с удовольствием доставим ваш товар прямо к вашему
           подъезду совершенно бесплатно! Ведь мы неплохо
           заработаем, поднимая его на ваш этаж.
         </p>
       </li>
-      <li class="slider-services__list-item">
+      <li class="our-services__list-item">
         <button type="button">Кредит</button>
-        <h2 class="slider-services__title">Кредит</h2>
-        <p class="slider-services__desc">
+        <p class="our-services__content">
           Залезть в долговую яму стало проще!Кредитные
           консультанты подберут для вас наиболее выгодные
           условия кредита.Выгдоные для нашего банка, разумеется.
         </p>
       </li>
-      <li class="slider-services__list-item">
+      <li class="our-services__list-item">
         <button type="button">Гаранти</button>
-        <h2 class="slider-services__title">Гаранти</h2>
-        <p class="slider-services__desc">
+        <p class="our-services__content">
           Если из-за возгорания купленного у нас товара у вас сгорит
           дом - не переживайте, мы выдадим вам новый.
           Товар, не дом конечно.
@@ -209,16 +221,24 @@
   <section class="brands">
     <ul class="brands__list">
       <li class="brands__list-item">
-        <a href="#">dji</a>
+        <a href="#">
+          <img src="#" alt="dji">
+        </a>
       </li>
       <li class="brands__list-item">
-        <a href="#">spgadgets</a>
+        <a href="#">
+          <img src="#" alt="spgadgets">
+        </a>
       </li>
       <li class="brands__list-item">
-        <a href="">GoPro</a>
+        <a href="">
+          <img src="#" alt="GoPro">
+        </a>
       </li>
       <li class="brands__list-item">
-        <a href="">vive</a>
+        <a href="">
+          <img src="#" alt="vive">
+        </a>
       </li>
     </ul>
   </section>
@@ -231,7 +251,7 @@
         <br>
         <span>который есть в каждом из нас</span>
       </p>
-      <ul class="about-us__partners" type="cicle">
+      <ul class="about-us__partners">
         <li class="about-us__partners-item">
           <a href="#">Деловые линии</a>
         </li>
@@ -248,7 +268,6 @@
       <h2 class="contacts__title">Контакты</h2>
       <p class="contacts__desc">
         <span>Вы можете забрать свой товар сами, заехав в нас офис. Заодно, вы сможете</span>
-        <br>
         <span>проверить работоспособность покупки. Всякое бывает.</span>
       </p>
       <img class="contacts__map" src="./img/map.png" alt="ул.Строителей, 15">

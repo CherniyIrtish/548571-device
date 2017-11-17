@@ -9,8 +9,9 @@
   <body>
     <header class="main-header">
       <h1 class="main-header__title">Device</h1>
-      <form>
+      <form action="#" method="get">
         <input class="main-header__search" type="text" placeholder="Поиск по сайту">
+        <button type="submit">Поиск по сайту</button>
       </form>
 
       <ul class="main-header__user-block" aria-label="Пользовательское меню">
@@ -29,7 +30,7 @@
       </ul>
 
       <nav class="site-navigation" aria-label="Каталог товаров">
-        <button type="button">Каталог товаров</button>
+        <a href="#">Каталог товаров</a>
         <ul class="site-navigation__catalog-list">
           <li class="site-navigation__catalog-item">
             <a href="#">Виртуальная реальность</a>
@@ -49,6 +50,7 @@
           <li class="site-navigation__catalog-item">
             <a href="#">Квадрокоптеры</a>
           </li>
+          <button type="button">+</button>
         </ul>
         <ul class="site-navigation__options-list">
           <li class="site-navigation__options-item">
@@ -64,149 +66,179 @@
       </nav>
     </header>
     <main class="main">
-      <section class="bread-crumbs">
-        <h1 class="bread-crumbs__title">Моноподы для селфи</h1>
-        <ul class="bread-crumbs__list">
-          <li class="bread-crumbs__crumb">
+      <section class="breadcrumbs">
+        <h1 class="breadcrumbs__title">Моноподы для селфи</h1>
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
             <a href="#">Главная</a>
           </li>
-          <li>
+          <li class="breadcrumbs__item">
             <a href="#">Каталог товаров</a>
           </li>
-          <li>
+          <li class="breadcrumbs__item--current">
             <a href="#">Моноподы для селфи</a>
           </li>
         </ul>
       </section>
       <section class="sort">
-        <span class="sort__title"></span>
-        <ul class="sort__list">
-          <li class="sort__list-option">
+        <span class="sort__title">Сортировка:</span>
+        <ul class="sort__sort-by-type-list">
+          <li class="sort__sort-by-type-item">
             <button type="button">По цене</button>
           </li>
-          <li class="sort__list-option">
+          <li class="sort__sort-by-type-item">
             <button type="button">По типу</button>
           </li>
-          <li class="sort__list-option">
+          <li class="sort__sort-by-type-item">
             <button type="button">По пулярности</button>
           </li>
         </ul>
-        <span class="sort__btn-block">
-        <button type="button">
-          <!--Если это кнопки, то что вкладывать в них? Какото контент есть?-->
-        </button>
-        <button type="button"></button>
-      </span>
+        <ul class="sort__sort-by-priority-list">
+          <li class="sort__sort-by-priority-item">
+            <button type="button" aria-label="Упорядочить товары по возрастанию">
+              <img src="./img/icons/icon-up-dir.svg" alt="По возрастанию">
+            </button>
+          </li>
+          <li class="sort__sort-by-priority-item">
+            <button type="button" aria-label="Упорядочить товары по по убыванию">
+              <img src="./img/icons/icon-down-dir.svg" alt="По убыванию">
+            </button>
+          </li>
+        </ul>
       </section>
 
       <section class="filter">
         <section class="filter__wrapper">
           <h3 class="filter__title">Фильтры:</h3>
-          <section class="range">
-            <h3 class="range__title">Стоимость</h3>
-            <div class="range__scale"></div>
-            <span class="range-left"></span>
-            <span class="range-right"></span>
-          </section>
-          <form name="options">
-            <section class="palette__options">
+          <form name="options" action="#" method="get">
+
+            <section class="range" aria-label="Установите диапазон стоимости товара">
+              <h3 class="range__title">Стоимость</h3>
+              <div class="range__scale"></div>
+              <span class="range-left"></span>
+              <span class="range-right"></span>
+            </section>
+
+            <section class="palette__options" aria-label="Выберите цвет">
               <h3 class="palette__options-title">Цвет</h3>
-              <input type="checkbox" name="color" id="black">
+              <input type="checkbox" name="color" id="black" value="black">
               <label for="black">Чёрный</label>
-              <input type="checkbox" name="color" id="white">
+              <input type="checkbox" name="color" id="white" value="white">
               <label for="white">Белый</label>
-              <input type="checkbox" name="color" id="blue">
+              <input type="checkbox" name="color" id="blue" value="blue">
               <label for="blue">Синий</label>
-              <input type="checkbox" name="color" id="red">
+              <input type="checkbox" name="color" id="red" value="red">
               <label for="red">Красный</label>
               <input type="checkbox" name="color" id="pink">
               <label for="pink">Розовый</label>
             </section>
-            <section class="bluetooth__options">
-              <input type="radio" id="bluetooth-is" name="bluetooth">
-              <label for="bluetooth-is">Есть</label>
-              <input type="radio" id="bluetooth-not" name="bluetooth">
-              <label for="bluetooth-not">Нет</label>
+
+            <section class="bluetooth__options" aria-label="Выберите с наличие bluetooth">
+              <input type="radio" id="bluetooth-true" name="bluetooth" value="true">
+              <label for="bluetooth-true">Есть</label>
+              <input type="radio" id="bluetooth-false" name="bluetooth" value="false">
+              <label for="bluetooth-false">Нет</label>
             </section>
-            <button type="button">Показать</button>
+
+            <button type="submit">Показать</button>
           </form>
         </section>
       </section>
 
-      <section class="pages">
-        <ul class="pages__list">
-          <li class="pages__list-item">
-            <a href="#">
-              <img src="./img/amateur-self.png" width="360" height="380" alt="amateur self-stick">
-              <span class="pages__list-item-title">Любительская селфи-палка</span>
-              <span class="pages__list-item-price">500 грн</span>
-            </a>
+      <section class="catalog">
+        <ul class="catalog__list">
+          <li class="catalog__item">
+              <img src="./img/amateur-self.png" width="360" height="380" alt="Любительская селфи-палка">
+              <div class="catalog__item--active">
+                <button type="button">В корзину</button>
+                <button type="button">Добавить к сравнению</button>
+              </div>
+            <div class="catalog__info">
+              <span class="catalog__item-title">Любительская селфи-палка</span>
+              <span class="catalog__list-item-price">500 грн</span>
+            </div>
           </li>
-          <li class="pages__list-item">
-            <img src="./img/proff-self.png" width="360" height="380" alt="professional self-stick">
-            <span class="pages__list-item-title">Профессиональная селфи-палка</span>
-            <span class="pages__list-item-price">1500 грн</span>
+          <li class="catalog__item">
+            <img src="./img/proff-self.png" width="360" height="380" alt="Профессиональная селфи-палка">
+            <div class="catalog__item--active">
+              <button type="button">В корзину</button>
+              <button type="button">Добавить к сравнению</button>
+            </div>
+            <div class="catalog__info">
+              <span class="catalog__item-title">Профессиональная селфи-палка</span>
+              <span class="catalog__item-price">1500 грн</span>
+            </div>
           </li>
-          <li class="pages__list-item">
-            <a href="#">
-              <img src="./img/water-resist-self.png" width="360" height="380" alt="water resist self-stick">
-              <span class="pages__list-item-title">Непотопляемая селфи палка</span>
-              <span class="pages__list-item-price">2500 грн</span>
-            </a>
+          <li class="catalog__item">
+            <img src="./img/water-resist-self.png" width="360" height="380" alt="Непотопляемая селфи палка">
+            <div class="catalog__item--active">
+              <button type="button">В корзину</button>
+              <button type="button">Добавить к сравнению</button>
+            </div>
+            <div class="catalog__info">
+              <span class="catalog__item-title">Непотопляемая селфи палка</span>
+              <span class="catalog__item-price">2500 грн</span>
+            </div>
           </li>
-          <li class="pages__list-item">
-            <a href="#">
-              <img src="./img/follow-self.png" width="360" height="380" alt="follow me self-stick">
-              <span class="pages__list-item-title">Селфи-палка "Следуй за мной"</span>
-              <span class="pages__list-item-price">4900 грн</span>
-            </a>
+          <li class="catalog__item">
+            <img src="./img/follow-self.png" width="360" height="380" alt="Селфи-палка 'Следуй за мной'">
+            <div class="catalog__item--active">
+              <button type="button">В корзину</button>
+              <button type="button">Добавить к сравнению</button>
+            </div>
+            <div class="catalog__info">
+              <span class="catalog__item-title">Селфи-палка "Следуй за мной"</span>
+              <span class="catalog__item-price">4900 грн</span>
+            </div>
           </li>
         </ul>
-        <section class="pages__nav">
-          <button class="pages__nav-prev" type="button">Назад</button>
-          <ul class="pages__nav-list">
-            <li class="pages__nav-list-page">
-              <a href="#">1</a>
-            </li>
-            <li class="pages__nav-list-page">
-              <a href="#">2</a>
-            </li>
-            <li class="pages__nav-list-page">
-              <a href="#">3</a>
-            </li>
-          </ul>
-          <button class="pages__nav-next" type="button">Вперед</button>
-        </section>
+      </section>
+      <section class="pagination">
+        <button class="pagination__btn--prev" type="button">Назад</button>
+        <ul class="pagination__list">
+          <li class="pagination__item">
+            <a href="#">1</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#">2</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#">3</a>
+          </li>
+        </ul>
+        <button class="pagination__btn--next" type="button">Вперед</button>
       </section>
     </main>
 
     <footer class="footer">
       <span>Device</span>
-      <ul class="footer__user-block">
-        <li class="footer__user-block-login">
-          <a href="#">Войти</a>
-        </li>
-        <li class="footer__user-block-compare">
-          <a href="#">Сравнить</a>
-        </li>
-        <li class="footer__user-block-basket">
-          <a href="#">Корзина</a>
-        </li>
-      </ul>
-      <span>г. Москва, ул.Строителей, 15</span>
-      <nav class="footer-navigation">
-        <ul class="footer-navigation__options-list">
-          <li class="footer-navigation__options-item">
+      <section class="user-block">
+        <ul class="user-block__list">
+          <li class="user-block__login">
+            <a href="#">Войти</a>
+          </li>
+          <li class="user-block__compare">
+            <a href="#">Сравнить</a>
+          </li>
+          <li class="user-block__basket">
+            <a href="#">Корзина</a>
+          </li>
+        </ul>
+      </section>
+      <address>г. Москва, ул.Строителей, 15</address>
+      <section class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
             <a href="#">Доставка</a>
           </li>
-          <li class="footer-navigation__options-item">
+          <li class="navigation__item">
             <a href="#">Гарантия</a>
           </li>
-          <li class="footer-navigation__options-item">
+          <li class="navigation__item">
             <a href="#">Контакты</a>
           </li>
         </ul>
-      </nav>
+      </section>
       <span>Тел.+7(495)495-95-95</span>
       <ul class="social-networks__list">
         <li class="social-networks__item">

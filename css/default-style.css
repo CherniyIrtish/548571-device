@@ -1,0 +1,31 @@
+@import "../fonts/fonts.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=cyrillic');
+/*не уверен правильно ли подключил шрифты через декораторы
+Gilroy extra bold - видит.
+*/
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Open Sans', 'Gilroy light, Arial', 'Gilroy light', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 1);
+
+  background-color: rgba(255, 255, 255, 1);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.footer__user-block a,
+.footer-navigation a {
+  color: rgba(255, 255, 255, 1);
+}
+
+ul {
+  list-style: none;
+}

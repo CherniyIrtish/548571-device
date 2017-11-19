@@ -8,9 +8,14 @@
   </head>
   <body>
     <header class="main-header">
-      <h1 class="main-header__title">Device</h1>
-      <form>
+      <h1 class="main-header__title">
+        <a href="#">Device</a>
+      </h1>
+
+      <form name="search" action="https://echo.htmlacademy.ru" method="get" class="search">
         <input class="main-header__search" type="text" placeholder="Поиск по сайту">
+        <!--Эту кнопку в спокойном состоянии вообще видно?По стайгайду - да, по макетам - нет.-->
+        <button type="submit"><span  class="search__find">Найти</span></button>
       </form>
 
       <ul class="main-header__user-block" aria-label="Пользовательское меню">
@@ -75,7 +80,9 @@
                 Восемь(Восемь, Карл!)метров длиной и весом всего 5 килограмм
               </p>
             </div>
-            <button type="button">Подробней</button>
+            <button type="button" class="promo__btn-details">
+              <span class="promo__hint">Подробней</span>
+            </button>
             <table class="promo__short-disc">
               <tr>
                 <td>8,5 м</td>
@@ -103,7 +110,9 @@
                 не пропускать занятия!
               </p>
             </div>
-            <button type="button">Подробней</button>
+            <button type="button" class="promo__btn-details">
+              <span class="promo__hint">Подробней</span>
+            </button>
             <table class="promo__details">
               <tr>
                 <td>48 часов</td>
@@ -126,7 +135,9 @@
                 мощным лазером, замаскированным под стандарную камеру.
               </p>
             </div>
-            <button type="button">Подробней</button>
+            <button type="button" class="promo__btn-details">
+              <span class="promo__hint">Подробней</span>
+            </button>
             <table class="promo__details">
               <tr>
                 <td>800 м</td>
@@ -157,31 +168,37 @@
         <ul class="category__list">
           <li class="category__item">
             <a href="#">
+              <img src="./img/icons/popular-virtual.svg" alt="Виртуальная реальность" width="160" height="160">
               <span>Виртуальная реальность</span>
             </a>
           </li>
           <li class="category__item">
             <a href="#">
+              <img src="./img/icons/popular-self.svg" alt="Моноподы для селфи" width="160" height="160">
               <span>Моноподы для селфи</span>
             </a>
           </li>
           <li class="category__item">
             <a href="#">
+              <img src="./img/icons/popular-cameras.svg" alt="Экшн-камеры" width="160" height="160">
               <span>Экшн-камеры</span>
             </a>
           </li>
           <li class="category__item">
             <a href="#">
+              <img src="./img/icons/popular-bracelets.svg" alt="Фитнес-браслеты" width="160" height="160">
               <span>Фитнес-браслеты</span>
             </a>
           </li>
           <li class="category__item">
             <a href="#">
+              <img src="./img/icons/popular-watches.svg" alt="Умные часы" width="160" height="160">
               <span>Умные часы</span>
             </a>
           </li>
           <li class="category__item">
             <a href="#">
+              <img src="./img/icons/popular-quadro.svg" alt="Квадрокоптеры" width="160" height="160">
               <span>Квадрокоптеры</span>
             </a>
           </li>
@@ -303,22 +320,25 @@
           </li>
         </ul>
       </nav>
-      <span>Тел.+7(495)495-95-95</span>
+      <a href="Тел.+7(495)495-95-95">Тел.+7(495)495-95-95</a>
       <ul class="social-networks__list">
         <li class="social-networks__item">
-          <a href="#">facebook</a>
+          <a href="#" aria-label="facebook"></a>
         </li>
         <li class="social-networks__item">
-          <a href="#">insta</a>
+          <a href="#" aria-label="instagram"></a>
         </li>
         <li class="social-networks__item">
-          <a href="#">twitter</a>
+          <a href="#" aria-label="twitter"></a>
         </li>
       </ul>
+      <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <img src="./img/icons/logo-html.svg" alt="Академия веб-дизайна" width="27" height="35">
+      </a>
     </footer>
     <section class="map-modal">
       <button aria-label="Закрыть"></button>
-      <img src="./img/map.png" alt="ул.Строителей, 15">
+      <img src="./img/map.png" alt="ул.Строителей, 15" width="960" height="559">
     </section>
     <section class="writeus-modal">
       <button aria-label="Закрыть"></button>
@@ -328,7 +348,7 @@
           <label for="user-name">Ваше имя:</label>
           <input type="text" name="name" id="user-name" placeholder="Представьтесь, пожалуйста">
           <label for="user-mail">Ваш e-mail:</label>
-          <input type="text" name="email" id="user-mail" placeholder="Представьтесь, пожалуйста">
+          <input type="text" name="email" id="user-mail" placeholder="Для отправки ответа">
           <label for="user-message"></label>
           <textarea name="message" id="user-message" placeholder="В свободной форме" cols="30" rows="10"></textarea>
         </fieldset>

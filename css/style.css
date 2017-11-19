@@ -1,0 +1,125 @@
+@import url('./default-style.css');
+@import url('helper-style.css');
+
+.main-header {
+  background-color: rgba(240, 197, 46, .5) ;
+}
+
+.main-header__title {
+  font-size: 48px;
+  font-family: "Gilroy extra bold", serif;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+}
+
+.main-header__search,
+.main-header__user-block {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  font-weight: 300;
+  letter-spacing: 0.15px;
+}
+
+.main-header__search {
+  opacity: .3;
+}
+
+.main-header__title:hover,
+.main-header__search:hover,
+.main-header__user-block a:hover,
+.site-navigation button:hover,
+.site-navigation__options-item:hover,
+.site-navigation__catalog-item:hover {
+  opacity: .6;
+}
+
+.main-header__title:active,
+.main-header__user-block a:active,
+.site-navigation__title,
+.site-navigation__options-item:active,
+.site-navigation__catalog-item:active,
+.category__item img:active {
+  opacity: .3;
+}
+
+/*Не смог назначить opacity: 1, все равно серый.*/
+.main-header__search:focus {
+  opacity: 1;
+}
+
+.search button {
+  width: 85px;
+  height: 49px;
+  border: 2px solid #000;
+  background-color: inherit;
+  /*Пришлось на баттоны добавлять курсор поинтер, сам не появился, разве на них по умолчанию нет?
+  Глянул в компьтед, ничего не отменят...магия?)
+  */
+  cursor: pointer;
+}
+
+.search button:hover {
+  background-color: #000000;
+  color: #fff;
+}
+/*как покрасить текст согласно стайлгайду? И вообще, у баттона при клике сначала срабатывает событие фокус,
+ так же как и с tabindex, а потом событие active?
+Или где почитать про последовательность срабатывания событий? :)
+*/
+.search .search__find:active,
+.site-navigation button:active,
+.promo__hint:active {
+  opacity: .3;
+}
+
+.site-navigation button,
+.site-navigation__options-item a,
+.promo__btn-details,
+.category__item span {
+  color: #000;
+  font-family: "Gilroy extra bold", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+}
+/*как при эктиве отключить бордер который появляется у кнопки? Там как то хитро правило называется, не помню.
+Ага, нашел, аутлайн. А оно когда появляется, при фокусе на баттон или при активе?
+*/
+.site-navigation button {
+  background-color: inherit;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+}
+/*А как бэеграунд такой расширяющийся делать как на макете?
+Это нужно его в процентах задать и анмацию добавить?*/
+.promo__btn-details {
+  background-color: rgba(240, 197, 46, 1) ;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  width: 220px;
+  height: 40px;
+}
+
+.promo__btn-details {
+  letter-spacing: 2.15px;
+}
+
+.category__item img {
+  background-color: rgba(240, 197, 46, .5) ;
+}
+
+.category__item img:hover {
+  background-color: rgba(240, 197, 46, 1) ;
+}
+
+.category__item span {
+  letter-spacing: 0.18px;
+}
+
+.footer {
+  background-color: #464646;
+}

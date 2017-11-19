@@ -8,10 +8,14 @@
 </head>
   <body>
     <header class="main-header">
-      <h1 class="main-header__title">Device</h1>
-      <form action="https://echo.htmlacademy.ru" method="get">
+      <h1 class="main-header__title">
+        <a href="#">Device</a>
+      </h1>
+
+      <form name="search" action="https://echo.htmlacademy.ru" method="get" class="search">
         <input class="main-header__search" type="text" placeholder="Поиск по сайту">
-        <button type="submit">Найти</button>
+        <!--Эту кнопку в спокойном состоянии вообще видно?По стайгайду - да, по макетам - нет.-->
+        <button type="submit"><span  class="search__find">Найти</span></button>
       </form>
 
       <ul class="main-header__user-block" aria-label="Пользовательское меню">
@@ -30,7 +34,7 @@
       </ul>
 
       <nav class="site-navigation" aria-label="Каталог товаров">
-        <a href="#">Каталог товаров</a>
+        <a href="#" class="site-navigation__title">Каталог товаров</a>
         <ul class="site-navigation__catalog-list">
           <li class="site-navigation__catalog-item">
             <a href="#">Виртуальная реальность</a>
@@ -199,13 +203,13 @@
         <button class="pagination__btn--prev" type="button">Назад</button>
         <ul class="pagination__list">
           <li class="pagination__item">
-            <a href="#">1</a>
+            <a href="#" aria-label="Первая страница каталога"></a>
           </li>
           <li class="pagination__item">
-            <a href="#">2</a>
+            <a href="#" aria-label="Вторая страница каталога"></a>
           </li>
           <li class="pagination__item">
-            <a href="#">3</a>
+            <a href="#" aria-label="Третья страница каталога"></a>
           </li>
         </ul>
         <button class="pagination__btn--next" type="button">Вперед</button>
@@ -214,43 +218,41 @@
 
     <footer class="footer">
       <span>Device</span>
-      <section class="user-block">
-        <ul class="user-block__list">
-          <li class="user-block__login">
-            <a href="#">Войти</a>
-          </li>
-          <li class="user-block__compare">
-            <a href="#">Сравнить</a>
-          </li>
-          <li class="user-block__basket">
-            <a href="#">Корзина</a>
-          </li>
-        </ul>
-      </section>
-      <address>г. Москва, ул.Строителей, 15</address>
-      <section class="navigation">
-        <ul class="navigation__list">
-          <li class="navigation__item">
+      <ul class="footer__user-block">
+        <li class="footer__user-block-login">
+          <a href="#">Войти</a>
+        </li>
+        <li class="footer__user-block-compare">
+          <a href="#">Сравнить</a>
+        </li>
+        <li class="footer__user-block-basket">
+          <a href="#">Корзина</a>
+        </li>
+      </ul>
+      <span>г. Москва, ул.Строителей, 15</span>
+      <nav class="footer-navigation">
+        <ul class="footer-navigation__options-list">
+          <li class="footer-navigation__options-item">
             <a href="#">Доставка</a>
           </li>
-          <li class="navigation__item">
+          <li class="footer-navigation__options-item">
             <a href="#">Гарантия</a>
           </li>
-          <li class="navigation__item">
+          <li class="footer-navigation__options-item">
             <a href="#">Контакты</a>
           </li>
         </ul>
-      </section>
-      <a href="Тел.+7(495)495-95-95" aria-label="Контактный номер"> </a>
+      </nav>
+      <a href="Тел.+7(495)495-95-95">Тел.+7(495)495-95-95</a>
       <ul class="social-networks__list">
         <li class="social-networks__item">
-          <a href="#">facebook</a>
+          <a href="#" aria-label="facebook"></a>
         </li>
         <li class="social-networks__item">
-          <a href="#">insta</a>
+          <a href="#" aria-label="instagram"></a>
         </li>
         <li class="social-networks__item">
-          <a href="#">twitter</a>
+          <a href="#" aria-label="twitter"></a>
         </li>
       </ul>
     </footer>

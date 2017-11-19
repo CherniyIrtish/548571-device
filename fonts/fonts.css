@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Gilroy extra bold';
+  src: local('gilroyextrabold');
+  src: url('./gilroyextrabold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Gilroy light';
+  src: local('gilroylight');
+  src: url('./gilroylight.woff2') format('woff2');
+}

@@ -1,5 +1,36 @@
-@import url('./default-style.css');
-@import url('helper-style.css');
+@import "../fonts/fonts.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=cyrillic');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', 'Gilroy extra bold', 'Gilroy light', 'Arial', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.footer__user-block a,
+.footer-navigation a {
+  color: rgba(255, 255, 255, 1);
+}
+
+ul {
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
 
 .main-header {
   background-color: rgba(240, 197, 46, .5) ;
@@ -30,7 +61,8 @@
 .main-header__user-block a:hover,
 .site-navigation button:hover,
 .site-navigation__options-item:hover,
-.site-navigation__catalog-item:hover {
+.site-navigation__catalog-item:hover,
+.footer__title:hover {
   opacity: .6;
 }
 
@@ -39,8 +71,16 @@
 .site-navigation__title,
 .site-navigation__options-item:active,
 .site-navigation__catalog-item:active,
-.category__item img:active {
+.category__item img:active,
+.footer__title:active {
   opacity: .3;
+}
+
+.site-navigation button:after {
+  content: '+';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
 }
 
 /*Не смог назначить opacity: 1, все равно серый.*/
@@ -94,7 +134,9 @@
   cursor: pointer;
 }
 /*А как бэеграунд такой расширяющийся делать как на макете?
-Это нужно его в процентах задать и анмацию добавить?*/
+Это нужно его в процентах задать и анмацию добавить?
+не нашел быстрого решения, жду комментариев)
+*/
 .promo__btn-details {
   background-color: rgba(240, 197, 46, 1) ;
   border: none;
@@ -102,10 +144,11 @@
   cursor: pointer;
   width: 220px;
   height: 40px;
+  letter-spacing: 2.15px;
 }
 
-.promo__btn-details {
-  letter-spacing: 2.15px;
+.promo__btn-details:hover {
+  color: rgba(0, 0 , 0, .3);
 }
 
 .category__item img {
@@ -120,6 +163,230 @@
   letter-spacing: 0.18px;
 }
 
+.brands__list-item img {
+  opacity: .2;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray; /* IE 6-9 */
+}
+
+.brands__list-item img:hover {
+  -webkit-filter: none;
+  -moz-filter: none;
+  -o-filter: none;
+  filter: none;
+  filter: none;
+  opacity: 1;
+}
+/*Так....ну в этом классе я не знаю как лучше сделать, наверное есть и хорошие способы.
+По честному я бы вообще span стилил под кнопку, но тут же требования...
+*/
+.close-btn {
+  display: inline-block;
+  outline: none;
+  background-color: inherit;
+  background-image: url('../img/icons/modal-close.svg');
+  border: none;
+  width: 55px;
+  height: 55px;
+  opacity: .5;
+  cursor: pointer;
+  /*А куда курсор поинтер пропадает, почему его назначать приходится дополнительно?*/
+}
+
+.close-btn:hover {
+  opacity: 1;
+}
+
+.close-btn:active {
+  opacity: .3;
+}
+
+.write-us-modal input {
+  width: 360px;
+  color: #464646;
+  opacity: .4;
+  line-height: 18px;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  /*не вижу цвета бекграунд колор, какой то серый, какой?*/
+  padding: 18px 20px;
+}
+
+.write-us-modal textarea {
+  padding: 18px 20px;
+}
+
+.write-us-modal input:focus {
+  background-color: rgba(255, 255, 255, 1);
+  /*как красиво вычитать толщину бордера при фокусе, что бы я тут не сочинял calc,
+   есть хорошие методы что бы оно не дергалось?*/
+  border: 3px;
+  /* не вижу цвет бордера, какой то желтый*/
+  opacity: 1;
+}
+
 .footer {
   background-color: #464646;
+}
+
+.footer__title {
+  color: #ffc600;
+  font-size: 48px;
+  font-family: "Gilroy extra bold", serif;
+}
+
+/*с свг не разобрался, очень много вникать нужно*/
+.footer__user-block-login,
+.footer__user-block-basket,
+.footer__user-block-compare {
+  opacity: 1;
+}
+
+.footer__user-block-login:hover,
+.footer__user-block-basket:hover,
+.footer__user-block-compare:hover {
+  opacity: .6;
+}
+
+.footer__user-block-login:active,
+.footer__user-block-basket:active,
+.footer__user-block-compare:active,
+.pagination__item:active {
+  opacity: .3;
+}
+
+.footer-navigation__options-item {
+  font-family: "Gilroy extra bold";
+  font-size: 18px;
+}
+
+/*Есть какая то короткая форма записи подобного? Не saas || less, а именно в css?
+Я бы тут отдельный класс выдал под ховеры и вешал бы в темплейте.
+Оп, а так можно? В смысле на этом проекте?
+*/
+.footer-navigation__options-item:active,
+.footer__logo:active,
+.social-networks__item:nth-child(1) a,
+.social-networks__item:nth-child(2) a,
+.social-networks__item:nth-child(3) a {
+  opacity: .3;
+}
+
+.footer-navigation__options-item:hover,
+.footer__logo:hover,
+.social-networks__item:nth-child(1) a:hover,
+.social-networks__item:nth-child(2) a:hover,
+.social-networks__item:nth-child(3) a:hover {
+  opacity: .6;
+}
+
+.social-networks__item:nth-child(1) a:active,
+.social-networks__item:nth-child(2) a:active,
+.social-networks__item:nth-child(3) a:active {
+  opacity: .1;
+}
+
+.breadcrumbs__title {
+  font-family: "Gilroy extra bold", serif;
+  font-size: 47px;
+}
+
+.breadcrumbs__item,
+.breadcrumbs__item--current {
+  opacity: .3;
+}
+
+.breadcrumbs__item:hover,
+.breadcrumbs__item--current:hover,
+.pagination__item:hover {
+  opacity: .6;
+}
+
+.breadcrumbs__item:active,
+.breadcrumbs__item--current:active {
+  opacity: .1;
+}
+
+.breadcrumbs__item:after {
+  content: '>';
+  vertical-align: middle;
+}
+
+.sort__title {
+  font-family: "Gilroy extra bold", serif;
+  font-size: 16px;
+}
+
+.sort__sort-by-type-item button {
+  font-size: 14px;
+  opacity: .3;
+  background-color: inherit;
+  border: none;
+  outline: none;
+}
+
+.sort__sort-by-type-item button:focus,
+.sort__sort-by-priority-item button:focus {
+  opacity: 1;
+}
+
+.sort__sort-by-priority-item button {
+  background-color: inherit;
+  outline: none;
+  border: none;
+  opacity: .2;
+}
+
+.sort__sort-by-priority-item button:hover {
+  opacity: .4;
+}
+
+.pagination__btn--prev,
+.pagination__btn--next {
+  font-family: "Gilroy extra bold", serif;
+  font-size: 16px;
+  outline: none;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+/*Блин, не вижу размера книпки при ховере, там бэеграунд меняется, не выделяет в авакоде*/
+.pagination__btn--prev:active,
+.pagination__btn--next:active,
+.pagination__item {
+  opacity: .3;
+}
+
+.catalog__item button {
+  outline: none;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.catalog__to-basket {
+  font-size: 18px;
+  text-transform: uppercase;
+  /*что то не так со шрифтами, он не подхватывает по умолчанию, приходится указывать явно*/
+  font-family: "Gilroy extra bold", serif;
+}
+
+.catalog__to-compare {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  opacity: .5;
+}
+
+.catalog__item-title {
+  font-family: "Gilroy extra bold", serif;
+  font-size: 18px;
+}
+
+.catalog__list-item-price {
+  font-family: "Gilroy light", serif;
+  font-size: 16px;
+  color: #464646;
 }

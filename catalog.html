@@ -34,7 +34,7 @@
       </ul>
 
       <nav class="site-navigation" aria-label="Каталог товаров">
-        <a href="#" class="site-navigation__title">Каталог товаров</a>
+        <button type="button">Каталог товаров</button>
         <ul class="site-navigation__catalog-list">
           <li class="site-navigation__catalog-item">
             <a href="#">Виртуальная реальность</a>
@@ -79,7 +79,7 @@
             <a href="#">Каталог товаров</a>
           </li>
           <li class="breadcrumbs__item--current">
-            <span>Моноподы для селфи</span>
+            <a href="#">Моноподы для селфи</a>
           </li>
         </ul>
       </section>
@@ -116,7 +116,7 @@
           <form name="options" action="https://echo.htmlacademy.ru" method="get">
 
             <fieldset class="range">
-              <legend>Установите диапазон стоимости товара</legend>
+              <legend class="visually-hidden">Установите диапазон стоимости товара</legend>
               <h3 class="range__title">Стоимость</h3>
               <div class="range__scale"></div>
               <span class="range-left"></span>
@@ -124,7 +124,7 @@
             </fieldset>
 
             <fieldset class="palette__options">
-              <legend>Выберите цвет</legend>
+              <legend class="visually-hidden">Выберите цвет</legend>
               <h3 class="palette__options-title">Цвет</h3>
               <input type="checkbox" name="color" id="black" value="black" checked>
               <label for="black">Чёрный</label>
@@ -139,7 +139,7 @@
             </fieldset>
 
             <fieldset class="bluetooth__options">
-              <legend>Выберите с наличие bluetooth</legend>
+              <legend class="visually-hidden">Выберите с наличие bluetooth</legend>
               <input type="radio" id="bluetooth-true" name="bluetooth" value="true" checked>
               <label for="bluetooth-true">Есть</label>
               <input type="radio" id="bluetooth-false" name="bluetooth" value="false">
@@ -156,8 +156,8 @@
           <li class="catalog__item">
               <img src="./img/amateur-self.png" width="360" height="380" alt="Любительская селфи-палка">
               <div class="catalog__item--active">
-                <button type="button">В корзину</button>
-                <button type="button">Добавить к сравнению</button>
+                <button class="catalog__to-basket" type="button">В корзину</button>
+                <button class="catalog__to-compare" type="button">Добавить к сравнению</button>
               </div>
             <div class="catalog__info">
               <span class="catalog__item-title">Любительская селфи-палка</span>
@@ -167,8 +167,8 @@
           <li class="catalog__item">
             <img src="./img/proff-self.png" width="360" height="380" alt="Профессиональная селфи-палка">
             <div class="catalog__item--active">
-              <button type="button">В корзину</button>
-              <button type="button">Добавить к сравнению</button>
+              <button class="catalog__to-basket" type="button">В корзину</button>
+              <button class="catalog__to-compare" type="button">Добавить к сравнению</button>
             </div>
             <div class="catalog__info">
               <span class="catalog__item-title">Профессиональная селфи-палка</span>
@@ -178,8 +178,8 @@
           <li class="catalog__item">
             <img src="./img/water-resist-self.png" width="360" height="380" alt="Непотопляемая селфи палка">
             <div class="catalog__item--active">
-              <button type="button">В корзину</button>
-              <button type="button">Добавить к сравнению</button>
+              <button class="catalog__to-basket" type="button">В корзину</button>
+              <button class="catalog__to-compare" type="button">Добавить к сравнению</button>
             </div>
             <div class="catalog__info">
               <span class="catalog__item-title">Непотопляемая селфи палка</span>
@@ -189,8 +189,8 @@
           <li class="catalog__item">
             <img src="./img/follow-self.png" width="360" height="380" alt="Селфи-палка 'Следуй за мной'">
             <div class="catalog__item--active">
-              <button type="button">В корзину</button>
-              <button type="button">Добавить к сравнению</button>
+              <button class="catalog__to-basket" type="button">В корзину</button>
+              <button class="catalog__to-compare" type="button">Добавить к сравнению</button>
             </div>
             <div class="catalog__info">
               <span class="catalog__item-title">Селфи-палка "Следуй за мной"</span>
@@ -203,13 +203,13 @@
         <button class="pagination__btn--prev" type="button">Назад</button>
         <ul class="pagination__list">
           <li class="pagination__item">
-            <a href="#" aria-label="Первая страница каталога"></a>
+            <a href="#" aria-label="Первая страница каталога">1</a>
           </li>
           <li class="pagination__item">
-            <a href="#" aria-label="Вторая страница каталога"></a>
+            <a href="#" aria-label="Вторая страница каталога">2</a>
           </li>
           <li class="pagination__item">
-            <a href="#" aria-label="Третья страница каталога"></a>
+            <a href="#" aria-label="Третья страница каталога">3</a>
           </li>
         </ul>
         <button class="pagination__btn--next" type="button">Вперед</button>
@@ -217,15 +217,18 @@
     </main>
 
     <footer class="footer">
-      <span>Device</span>
+      <a href='#' class="footer__title">Device</a>
       <ul class="footer__user-block">
         <li class="footer__user-block-login">
+          <img src="./img/icons/user.svg" alt="Войти" width="13" height="12">
           <a href="#">Войти</a>
         </li>
         <li class="footer__user-block-compare">
+          <img src="./img/icons/compare.svg" alt="Сравнить" width="10" height="10">
           <a href="#">Сравнить</a>
         </li>
         <li class="footer__user-block-basket">
+          <img src="./img/icons/cart.svg" alt="Корзина" width="12" height="12">
           <a href="#">Корзина</a>
         </li>
       </ul>
@@ -233,28 +236,37 @@
       <nav class="footer-navigation">
         <ul class="footer-navigation__options-list">
           <li class="footer-navigation__options-item">
-            <a href="#">Доставка</a>
+            <a href="#" aria-label="Доставка">Доставка</a>
           </li>
           <li class="footer-navigation__options-item">
-            <a href="#">Гарантия</a>
+            <a href="#" aria-label="Гарантия">Гарантия</a>
           </li>
           <li class="footer-navigation__options-item">
-            <a href="#">Контакты</a>
+            <a href="#" aria-label="Контакты">Контакты</a>
           </li>
         </ul>
       </nav>
       <a href="Тел.+7(495)495-95-95">Тел.+7(495)495-95-95</a>
       <ul class="social-networks__list">
         <li class="social-networks__item">
-          <a href="#" aria-label="facebook"></a>
+          <a href="#" aria-label="facebook">
+            <img src="./img/icons/fb.svg" alt="фейсбук" width="32" height="32">
+          </a>
         </li>
         <li class="social-networks__item">
-          <a href="#" aria-label="instagram"></a>
+          <a href="#" aria-label="instagram">
+            <img src="./img/icons/instagram.svg" alt="инстаграм" width="32" height="32">
+          </a>
         </li>
         <li class="social-networks__item">
-          <a href="#" aria-label="twitter"></a>
+          <a href="#" aria-label="twitter">
+            <img src="./img/icons/twitter.svg" alt="твитер" width="32" height="32">
+          </a>
         </li>
       </ul>
+      <a class="footer__logo" href="https://htmlacademy.ru/intensive/htmlcss">
+        <img src="./img/icons/logo-html.svg" alt="Академия веб-дизайна" width="27" height="35">
+      </a>
     </footer>
   </body>
 </html>
